@@ -1,0 +1,6 @@
+meta:
+  type: Surl
+  version: 1
+
+middlewareScripts:
+  - /middlewares/testMiddleware.js
