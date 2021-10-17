@@ -1,0 +1,39 @@
+
+meta:
+  kind: Gigamono
+  version: 1
+
+broker:
+  url: nats://127.0.0.1:4222
+  subscriptions:
+    workspaces:
+      version: 0
+    logs:
+      version: 0
+
+engines:
+  api:
+    port: 5050
+    dbUrl: ../tmp/api.db
+    replyTimeout: 5
+
+  backend:
+    rootPath: ../tmp/backend
+    subscriptions:
+      workspaces:
+        run:
+          subscribedId: "*"
+
+  db:
+    dbUrl: postgresql://localhost:5432/dbserver
+    subscriptions:
+      workspaces:
+        query:
+          subscribedId: "*"
+
+ui:
+  dir: ../ui/public
+
+logs:
+  file: server.log
+  isPublished: true
