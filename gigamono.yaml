@@ -14,11 +14,11 @@ broker:
 engines:
   api:
     port: 5050
-    dbUrl: ../tmp/api.db
+    dbUrl: postgresql://localhost:5432/apidb
     replyTimeout: 5
 
   backend:
-    rootPath: ../tmp/backend
+    rootPath: ../sample/backend
     subscriptions:
       workspaces:
         run:
