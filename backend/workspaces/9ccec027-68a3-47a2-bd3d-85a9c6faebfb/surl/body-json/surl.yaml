@@ -2,5 +2,9 @@ meta:
   type: Surl
   version: 1
 
-middleware_scripts:
-  - /middlewares/testMiddleware.js
+permissions:
+  fs:
+    dirs: [ '/assets' ]
+
+middlewares:
+  - /middlewares/test-middleware.js
