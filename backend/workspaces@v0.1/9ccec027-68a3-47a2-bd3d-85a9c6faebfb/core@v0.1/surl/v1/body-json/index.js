@@ -1,0 +1,6 @@
+// TODO(appcypher): Use workerjs APIs
+// self.addEventListener('fetch', event => {
+//   event.respondWith(new Response("Hello world"));
+// })
+
+

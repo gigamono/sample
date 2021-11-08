@@ -1,0 +1,11 @@
+meta:
+  kind: Surl
+  version: 0.0.1
+
+permissions:
+  fs:
+    open: [ '/assets' ]
+    write: [ '/assets' ]
+
+middlewares:
+  - testMiddleware.js

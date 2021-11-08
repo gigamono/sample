@@ -29,9 +29,11 @@ engines:
       workspaces:
         query: ["*"]
 
-ui:
-  dir: ../ui/public
+web_ui:
+  dir: ../web-ui/public
 
 logs:
   file: server.log
   is_published: false
+
+domain: localhost
