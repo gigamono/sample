@@ -8,4 +8,4 @@ permissions:
     write: [ '/assets' ]
 
 middlewares:
-  - testMiddleware.js
+  - test_middleware.js

@@ -18,7 +18,7 @@ engines:
     reply_timeout: 5
 
   backend:
-    root_path: ../sample/backend
+    root_path: ../sample
     subscriptions:
       workspaces:
         run_surl: ["*"]
