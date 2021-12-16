@@ -4,8 +4,11 @@ meta:
 
 permissions:
   fs:
-    open: [ '/assets' ]
-    write: [ '/assets' ]
+    open: ["/assets"]
+    write: ["/assets"]
 
 middlewares:
-  - test_middleware.js
+  - script: test_middleware.js
+    # permissions:
+    #   http_event:
+    #     read_request: ["/v1/*"]
