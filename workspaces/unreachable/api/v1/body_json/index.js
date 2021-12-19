@@ -1,7 +1,7 @@
-const { request, respondWith } = httpEvent;
+const { http } = events;
 
 // Read body.
-const buf = await request.body.readAll();
+const buf = await http.request.body.readAll();
 
 // Log body.
 log.info("request body decoded =", decode(buf));
@@ -15,7 +15,7 @@ if (Math.random() < 0.5) {
 
 // Sending response body with fixed content length.
 async function sendFixedResponse() {
-  await respondWith(
+  await http.respondWith(
     new Response('{ "message": "Hello beep boop!" }', {
       headers: { "Content-Type": "application/json" },
     })
@@ -30,5 +30,5 @@ async function sendStreamingResponse() {
     }
   }
 
-  await respondWith(new Response(iterator()));
+  await http.respondWith(new Response(iterator()));
 }

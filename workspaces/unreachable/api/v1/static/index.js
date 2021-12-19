@@ -8,11 +8,4 @@ log.info(">>> request = ", http.request);
 
 const file = await File.open(path, { read: true });
 
-await http.respondWith(new Response(file, {
-  headers: {
-    Some: "None",
-    Ok: "Err",
-  },
-  version: "2",
-  status: 500,
-}));
+await http.respondWith(new Response(file));

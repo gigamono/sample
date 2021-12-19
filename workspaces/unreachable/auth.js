@@ -1,3 +1,5 @@
+"use strict";
+
 const { http } = events;
 
 log.info(">>> authenticating ...");
