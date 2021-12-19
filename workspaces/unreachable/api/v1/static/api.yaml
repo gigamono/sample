@@ -1,0 +1,13 @@
+meta:
+  kind: api
+  version: 0.0.1
+
+permissions:
+  fs:
+    open: ["/assets"]
+    write: ["/assets"]
+
+middlewares: []
+
+authentication:
+  enabled: false

@@ -1,0 +1,10 @@
+meta:
+  version: 0.1.0
+  kind: extension
+  name: lister
+
+views:
+  - kind: gigamono:sidebar
+
+controller:
+  script: controller.js

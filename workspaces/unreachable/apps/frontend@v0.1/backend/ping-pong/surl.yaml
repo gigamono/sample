@@ -1,0 +1,10 @@
+meta:
+  version: 0.1.0
+  kind: api
+
+permissions:
+  fs:
+    open: [ '/assets' ]
+    write: [ '/assets' ]
+
+middlewares: null

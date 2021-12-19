@@ -1,0 +1,14 @@
+meta:
+  kind: api
+  version: 0.0.1
+
+permissions:
+  fs:
+    open: ["/assets"]
+    write: ["/assets"]
+
+middlewares:
+  - script: mine/middleware.js
+
+authentication:
+  enabled: true

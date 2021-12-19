@@ -12,16 +12,19 @@ broker:
 
 engines:
   proxy:
-    port: 5050
+    socket_address: localhost:5050
     workspaces_db_url: postgresql://localhost:5432/apidb
-    reply_timeout: 5
+
+  workspace:
+    socket_address: 127.0.0.1:5051
+    workspaces_db_url: postgresql://localhost:5432/apidb
 
   backend:
-    port: 5051
+    socket_address: 0.0.0.0:5052
     root_path: ../sample
     subscriptions:
       workspaces:
-        run_surl: ["*"]
+        run_api: ["*"]
 
   db:
     db_url: postgresql://localhost:5432/dbserver
@@ -35,5 +38,3 @@ web_ui:
 logs:
   file: server.log
   is_published: false
-
-domain: localhost
