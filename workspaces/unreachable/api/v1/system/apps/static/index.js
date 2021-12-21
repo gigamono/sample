@@ -5,11 +5,12 @@ const {
   events: { http },
 } = Tera;
 
-let path = http.request.uri.query.get("file") || "<query not specified>";
+let path = http.request.uri.query.get("file");
+if (path == null) {
+  throw Error('Must specify file as query');
+}
 
 log.info(">>> query file =", path);
-
-log.info(">>> request = ", http.request);
 
 const file = await File.open(path, { read: true });
 

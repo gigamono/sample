@@ -1,7 +1,7 @@
-"use strict";
+function main() {
+  const { log } = Tera;
 
-const { http } = events;
+  log.info(">>> middlewaring ...");
 
-log.info(">>> middlewaring ...");
-
-log.info(">>> request = ", http.request);
+  return true;
+}

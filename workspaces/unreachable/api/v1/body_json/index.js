@@ -1,7 +1,16 @@
-const { http } = events;
+const {
+  log,
+  Response,
+  encode,
+  decode,
+  events: { http },
+} = Tera;
 
 // Read body.
 const buf = await http.request.body.readAll();
+
+// Log host.
+log.info("request host header  =", http.request.headers.get("host"));
 
 // Log body.
 log.info("request body decoded =", decode(buf));
