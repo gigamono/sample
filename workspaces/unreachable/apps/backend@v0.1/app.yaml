@@ -1,0 +1,34 @@
+meta:
+  version: 0.1.0
+  kind: subapp
+  name: frontend
+  icon:
+    - assets/icons/outline.svg
+    - assets/icons/filled.svg
+
+permissions:
+
+canvas: # The UI shown on the canvas and its logic
+  dist: dist/
+
+dashboard:
+  views:
+    - kind: gigamono:sidebar
+      icons:
+        - assets/icons/l-sidebar-outline.svg
+        - assets/icons/l-sidebar-filled.svg
+      components:
+        - kind: card
+          props:
+            height: l
+            width: s
+
+  controller:
+    script: controller.js
+
+backends:
+  - kind: api
+    path: backend/ping-pong
+
+extensions:
+  - kind: gigamono:sidebar

@@ -15,7 +15,7 @@ log.info(">>> installed =", installed);
 // TODO(appcypher): Get from database.
 const all_apps = [
   { name: "frontend", version: "0.1", installed: true },
-  { name: "backtend", version: "0.1", installed: true },
+  { name: "backend", version: "0.1", installed: true },
   { name: "deck", version: "0.1", installed: false },
   { name: "database", version: "0.1", installed: false },
 ];
