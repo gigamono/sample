@@ -5,13 +5,21 @@ const {
   events: { http },
 } = Tera;
 
-let path = http.request.uri.query.get("file");
-if (path == null) {
-  throw Error('Must specify file as query');
+let path = http.request.uri.query.get("path") || "index.html";
+
+log.info(">>> path =", path);
+
+const app = http.request.uri.query.get("app");
+if (app == null) {
+  throw Error("Must specify app query");
 }
 
-log.info(">>> query file =", path);
+log.info(">>> app =", app);
 
-const file = await File.open(path, { read: true });
+const fullPath = `apps/${app}/dist/${path}`;
+
+log.info(">>> fullPath =", fullPath);
+
+const file = await File.open(fullPath, { read: true });
 
 await http.respondWith(new Response(file));

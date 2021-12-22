@@ -4,9 +4,9 @@ meta:
   runtime_version: 0.0.1
 
 permissions:
-  fs:
-    open: ["/assets"]
-    write: ["/assets"]
+  http_event:
+    read_request: ["api/v1/body/**"]
+    send_request: ["api/v1/static/**"]
 
 middlewares:
   - script: mine/middleware.js

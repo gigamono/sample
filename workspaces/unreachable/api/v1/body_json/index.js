@@ -10,10 +10,10 @@ const {
 const buf = await http.request.body.readAll();
 
 // Log host.
-log.info("request host header  =", http.request.headers.get("host"));
+log.info(">>> request host header  =", http.request.headers.get("host"));
 
 // Log body.
-log.info("request body decoded =", decode(buf));
+log.info(">>> request body decoded =", decode(buf));
 
 // Send random response.
 if (Math.random() < 0.5) {

@@ -5,9 +5,9 @@ const {
   events: { http },
 } = Tera;
 
-let path = http.request.uri.query.get("file") || "<query not specified>";
+let path = http.request.uri.query.get("path") || "<query not specified>";
 
-log.info(">>> query file =", path);
+log.info(">>> query path =", path);
 
 log.info(">>> request = ", http.request);
 

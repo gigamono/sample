@@ -4,9 +4,6 @@ meta:
   runtime_version: 0.0.1
 
 permissions:
-  fs:
-    open: ["apps/frontend@v0.1/dist"]
-    read: ["apps/frontend@v0.1/dist"]
   http_event:
     read_request: ["api/v1/system/apps/**"]
     send_request: ["api/v1/system/apps/**"]

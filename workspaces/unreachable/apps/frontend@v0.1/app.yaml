@@ -7,9 +7,6 @@ meta:
     - assets/icons/filled.svg
 
 permissions:
-  fs:
-    open: [ '/assets' ]
-    write: [ '/assets' ]
 
 canvas: # The UI shown on the canvas and its logic
   dist: dist/
