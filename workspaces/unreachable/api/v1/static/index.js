@@ -11,6 +11,6 @@ log.info(">>> query path =", path);
 
 log.info(">>> request = ", http.request);
 
-const file = await File.open(path, { read: true });
+const file = await File.open("extensions/lister@v0.1/" + path, { read: true });
 
 await http.respondWith(new Response(file));

@@ -5,10 +5,5 @@ meta:
 
 permissions:
   http_event:
-    read_request: ["api/v1/system/apps/**"]
-    send_request: ["api/v1/system/apps/**"]
-
-middlewares: []
-
-authentication:
-  enabled: false
+    read_request: true
+    send_response: true

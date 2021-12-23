@@ -1,7 +1,6 @@
 meta:
   version: 0.1.0
-  kind: subapp
-  name: frontend
+  kind: app
   icon:
     - assets/icons/outline.svg
     - assets/icons/filled.svg

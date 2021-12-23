@@ -4,6 +4,13 @@ meta:
   runtime_version: 0.0.1
 
 permissions:
+  fs:
+    open: ["apps/*/dist"]
+    read: ["apps/*/dist"]
+
   http_event:
     read_request: true
     send_response: true
+
+authentication:
+  enabled: false

@@ -10,7 +10,9 @@ if (http.request.method !== "GET") {
 
 let installed = http.request.uri.query.get("installed");
 
-log.info(">>> installed =", installed);
+let apps_param = http.request.uri.path.get_param("apps");
+
+log.info('>>> apps_param =', apps_param);
 
 // TODO(appcypher): Get from database.
 const all_apps = [
@@ -25,6 +27,6 @@ if (installed) {
   result = all_apps.filter((item) => item.installed);
 }
 
-let response = new Response(JSON.stringify(result));
+let response = new Response(JSON.stringify({ data: result }));
 
 await http.respondWith(response);

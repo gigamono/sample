@@ -5,8 +5,8 @@ meta:
 
 permissions:
   http_event:
-    read_request: ["api/v1/body/**"]
-    send_request: ["api/v1/static/**"]
+    read_request: true
+    send_response: true
 
 middlewares:
   - script: mine/middleware.js
