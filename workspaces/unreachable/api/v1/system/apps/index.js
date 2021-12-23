@@ -9,10 +9,9 @@ if (http.request.method !== "GET") {
 }
 
 let installed = http.request.uri.query.get("installed");
-
 let apps_param = http.request.uri.path.get_param("apps");
 
-log.info('>>> apps_param =', apps_param);
+log.info(">>> apps_param =", apps_param);
 
 // TODO(appcypher): Get from database.
 const all_apps = [
@@ -23,7 +22,7 @@ const all_apps = [
 ];
 
 let result = all_apps;
-if (installed) {
+if (installed === null || installed) {
   result = all_apps.filter((item) => item.installed);
 }
 

@@ -5,8 +5,8 @@ meta:
 
 permissions:
   fs:
-    open: ["mine"]
-    read: ["mine"]
+    open: ["**"]
+    read: ["**"]
 
   http_event:
     read_request: true

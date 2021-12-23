@@ -5,8 +5,8 @@ meta:
 
 permissions:
   fs:
-    open: ["apps/*/dist"]
-    read: ["apps/*/dist"]
+    open: ["apps/*/dist/**"]
+    read: ["apps/*/dist/**"]
 
   http_event:
     read_request: true
