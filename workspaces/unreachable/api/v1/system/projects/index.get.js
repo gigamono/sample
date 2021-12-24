@@ -4,10 +4,6 @@ const {
   events: { http },
 } = Tera;
 
-if (http.request.method !== "GET") {
-  throw Error("expected a GET method");
-}
-
 let space = http.request.uri.query.get("space");
 
 // TODO(appcypher): Get from database.

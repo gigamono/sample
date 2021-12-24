@@ -5,10 +5,6 @@ const {
   events: { http },
 } = Tera;
 
-if (http.request.method !== "GET") {
-  throw Error("expected a GET method");
-}
-
 let path = http.request.uri.query.get("path") || "<query not specified>";
 
 log.info(">>> query path =", path);

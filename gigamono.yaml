@@ -7,4 +7,4 @@ engines:
     root_path: ../sample
 
 web_ui:
-  dir: ../web-ui/public
+  dir: ../web-ui/build

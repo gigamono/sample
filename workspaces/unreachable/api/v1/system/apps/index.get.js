@@ -4,10 +4,6 @@ const {
   events: { http },
 } = Tera;
 
-if (http.request.method !== "GET") {
-  throw Error("expected a GET method");
-}
-
 let installed = http.request.uri.query.get("installed");
 let apps_param = http.request.uri.path.get_param("apps");
 
