@@ -18,6 +18,8 @@ if (installed) {
   result = all_spaces.filter((item) => item.installed);
 }
 
-let response = new Response(JSON.stringify({ data: result }));
+let response = new Response(JSON.stringify({ data: result }), {
+  headers: { "Access-Control-Allow-Origin": "http://localhost:3000" },
+});
 
 await http.respondWith(response);

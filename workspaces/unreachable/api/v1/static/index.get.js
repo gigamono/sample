@@ -11,6 +11,8 @@ log.info(">>> query path =", path);
 
 log.info(">>> request = ", http.request);
 
-const file = await File.open(path, { read: true });
+const file = await File.open(path, { read: true }, {
+  headers: { "Access-Control-Allow-Origin": "http://localhost:3000" },
+});
 
 await http.respondWith(new Response(file));

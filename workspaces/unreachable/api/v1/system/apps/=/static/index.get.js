@@ -20,4 +20,8 @@ log.info(">>> appPath =", appPath);
 
 const file = await File.open(appPath, { read: true });
 
-await http.respondWith(new Response(file));
+let response = new Response(file, {
+  headers: { "Access-Control-Allow-Origin": "http://localhost:3000" },
+});
+
+await http.respondWith(response);
