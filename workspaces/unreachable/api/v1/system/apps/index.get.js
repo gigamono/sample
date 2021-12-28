@@ -10,8 +10,9 @@ let installed = http.request.uri.query.get("installed");
 const all_apps = [
   { name: "frontend", version: "0.1", installed: true },
   { name: "backend", version: "0.1", installed: true },
-  { name: "deck", version: "0.1", installed: false },
-  { name: "database", version: "0.1", installed: false },
+  { name: "deck", version: "0.1", installed: true },
+  { name: "database", version: "0.1", installed: true },
+  { name: "security", version: "0.1", installed: false },
 ];
 
 let result = all_apps;

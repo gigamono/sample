@@ -11,12 +11,7 @@ if (app == null) {
   throw Error("Must specify app query");
 }
 
-log.info(">>> path =", path);
-log.info(">>> app =", app);
-
 const appPath = `apps/${app}/dist/${path}`;
-
-log.info(">>> appPath =", appPath);
 
 const file = await File.open(appPath, { read: true });
 

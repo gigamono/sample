@@ -14,8 +14,8 @@ dashboard:
   views:
     - kind: gigamono:sidebar
       icons:
-        - assets/icons/l-sidebar-outline.svg
-        - assets/icons/l-sidebar-filled.svg
+        - assets/icons/l_sidebar_outline.svg
+        - assets/icons/l_sidebar_filled.svg
       components:
         - kind: card
           props:

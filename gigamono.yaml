@@ -5,6 +5,8 @@ meta:
 engines:
   backend:
     root_path: ../sample
+    runtime:
+      enable_snapshot: true
 
 web_ui:
   dir: ../web-ui/build
