@@ -8,11 +8,11 @@ let installed = http.request.uri.query.get("installed");
 
 // TODO(appcypher): Get from database.
 const all_apps = [
-  { name: "frontend", version: "0.1", installed: true },
-  { name: "backend", version: "0.1", installed: true },
-  { name: "deck", version: "0.1", installed: true },
-  { name: "database", version: "0.1", installed: true },
-  { name: "security", version: "0.1", installed: false },
+  { name: "frontend@v0.1", installed: true },
+  { name: "backend@v0.1", installed: true },
+  { name: "deck@v0.1", installed: true },
+  { name: "database@v0.1", installed: true },
+  { name: "security@v0.1", installed: false },
 ];
 
 let result = all_apps;
