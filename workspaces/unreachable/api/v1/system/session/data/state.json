@@ -1,0 +1,12 @@
+{
+  "activeApps": [
+    { "name": "deck@v0.1" },
+    { "name": "frontend@v0.1" },
+    { "name": "backend@v0.1" },
+    { "name": "database@v0.1" }
+  ],
+  "focusSpace": null,
+  "focusProject": null,
+  "focusApp": null,
+  "focusTab": null
+}

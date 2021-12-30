@@ -9,4 +9,4 @@ engines:
       enable_snapshot: true
 
 web_ui:
-  dir: ../web-ui/build
+  dir: ../web_ui/build

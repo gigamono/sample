@@ -4,11 +4,13 @@ meta:
   runtime_version: 0.0.1
 
 permissions:
+  fs:
+    open: ["api/v1/system/session/**"]
+    read: ["api/v1/system/session/**"]
+
   http_event:
     read_request: true
     send_response: true
 
-  fs:
-    open: ["api/v1/system/session/**"]
-    read: ["api/v1/system/session/**"]
-    write: ["api/v1/system/session/**"]
+authentication:
+  enabled: false
