@@ -8,9 +8,9 @@ let installed = http.request.uri.query.get("installed");
 
 // TODO(appcypher): Get from database.
 const all_spaces = [
-  { name: "marketing" },
-  { name: "development" },
-  { name: "product" },
+  { name: "Marketing Team" },
+  { name: "Development Team" },
+  { name: "Product Team" },
 ];
 
 let result = all_spaces;

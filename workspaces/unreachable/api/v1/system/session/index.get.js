@@ -11,22 +11,17 @@ const profile = http.request.uri.query.get("profile");
 const notifications = http.request.uri.query.get("notifications");
 
 // Set filename.
-let filename = "api/v1/system/session/data/state.json";
+let filename = "/data/api/v1/system/session/state.json";
 
 if (profile) {
-  filename = "api/v1/system/session/data/profile.json";
+  filename = "/data/api/v1/system/session/profile.json";
 } else if (notifications) {
-  filename = "api/v1/system/session/data/notifications.json";
+  filename = "/data/api/v1/system/session/notifications.json";
 }
 
 // TODO(appcypher): Get from database.
-const file = await File.open(filename, {
-  read: true,
-  write: true,
-});
-
+const file = await File.open(filename, { read: true });
 const content = await file.readAll();
-
 const sessionState = JSON.parse(decode(content));
 
 let response = new Response(JSON.stringify({ data: sessionState }), {

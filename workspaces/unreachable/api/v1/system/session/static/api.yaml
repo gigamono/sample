@@ -5,8 +5,8 @@ meta:
 
 permissions:
   fs:
-    open: ["api/v1/system/session/**"]
-    read: ["api/v1/system/session/**"]
+    open: ["/data/api/v1/system/session/**"]
+    read: ["/data/api/v1/system/session/**"]
 
   http_event:
     read_request: true

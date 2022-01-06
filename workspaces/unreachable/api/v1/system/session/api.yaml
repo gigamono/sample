@@ -9,6 +9,6 @@ permissions:
     send_response: true
 
   fs:
-    open: ["api/v1/system/session/**"]
-    read: ["api/v1/system/session/**"]
-    write: ["api/v1/system/session/**"]
+    open: ["/data/api/v1/system/session/**"]
+    read: ["/data/api/v1/system/session/**"]
+    write: ["/data/api/v1/system/session/**"]

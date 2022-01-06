@@ -6,7 +6,7 @@ engines:
   backend:
     root_path: ../sample
     runtime:
-      enable_snapshot: true
+      enable_snapshot: false
 
 web_ui:
   dir: ../web_ui/build

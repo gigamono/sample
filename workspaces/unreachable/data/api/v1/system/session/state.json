@@ -1,0 +1,16 @@
+{
+  "activeUserApps": [
+    { "name": "deck@v0.1" },
+    { "name": "frontend@v0.1" },
+    { "name": "backend@v0.1" },
+    { "name": "database@v0.1" }
+  ],
+  "activeSystemApps": [
+    { "name": "marketplace@v0.1" },
+    { "name": "settings@v0.1" }
+  ],
+  "selectedSpace": null,
+  "selectedProject": null,
+  "selectedApp": null,
+  "selectedTab": null
+}
