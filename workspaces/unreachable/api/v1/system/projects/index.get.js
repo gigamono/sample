@@ -1,7 +1,6 @@
 import { fetchProjectsFromFile } from "../../../../lib/api/v1/system/projects/utils.js";
 
 const {
-  log,
   Response,
   events: { http },
 } = Tera;

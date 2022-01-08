@@ -12,3 +12,4 @@ permissions:
     open: ["/data/api/v1/system/session/**"]
     read: ["/data/api/v1/system/session/**"]
     write: ["/data/api/v1/system/session/**"]
+    execute: ["/lib/api/v1/system/session/utils.js"]

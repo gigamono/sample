@@ -5,6 +5,7 @@ const {
   events: { http },
 } = Tera;
 
+// Reuse code accross APIs.
 function checkValidCors() {
   log.info("Headers:", http.request.headers);
 
@@ -16,7 +17,7 @@ function checkValidCors() {
 
   if (
     projectId &&
-    ["POST", "GET", "OPTIONS", "DELETE"].includes(accessMethod)
+    ["POST", "GET", "DELETE"].includes(accessMethod)
   ) {
     return true;
   }

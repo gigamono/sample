@@ -1,0 +1,15 @@
+meta:
+  kind: api
+  version: 0.0.1
+  runtime_version: 0.0.1
+
+permissions:
+  http_event:
+    read_request: true
+    send_response: true
+
+  fs:
+    open: ["/data/api/v1/system/profile/**"]
+    read: ["/data/api/v1/system/profile/**"]
+    write: ["/data/api/v1/system/profile/**"]
+    execute: ["/lib/api/v1/system/profile/utils.js"]

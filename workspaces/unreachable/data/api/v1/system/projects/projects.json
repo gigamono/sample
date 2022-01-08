@@ -3,60 +3,77 @@
     "id": "dfb8ec34-928d-42e4-87aa-d50e055cf09b",
     "name": "Zero-hero Campaign",
     "space": "Marketing Team",
-    "color": null
+    "color": null,
+    "deleted": false
   },
   {
     "id": "d68d6c4c-6055-4656-ba04-c1c5ebbd0e57",
     "name": "Email Automations",
     "space": "Marketing Team",
-    "color": "--color-misc-orange"
+    "color": "--color-misc-orange",
+    "deleted": false
   },
   {
     "id": "722778c1-ae9c-4f35-95c0-087cc0b4b9de",
     "name": "Outreach",
     "space": "Marketing Team",
-    "color": null
+    "color": null,
+    "deleted": false
   },
   {
     "id": "73e66b4f-baa7-4409-bf39-87a944fc7403",
     "name": "Internal",
     "space": "Marketing Team",
-    "color": null
+    "color": null,
+    "deleted": false
+  },
+  {
+    "id": "ece6d20d-6277-434a-bef1-8ee6fef1a5fa",
+    "name": "New Avenue",
+    "space": "Marketing Team",
+    "color": null,
+    "deleted": false
   },
   {
     "id": "fc60c443-477c-4fb9-adb3-21845bd4058d",
     "name": "GenerateX",
     "space": "Development Team",
-    "color": "--color-misc-turquoise"
+    "color": "--color-misc-turquoise",
+    "deleted": false
   },
   {
     "id": "94ec1081-8eba-43b0-bd1f-f784bd51d04f",
     "name": "GenerateX game",
     "space": "Development Team",
-    "color": null
+    "color": null,
+    "deleted": false
   },
   {
     "id": "07bd4b2e-b9a2-4f42-a8a2-58dff3c3495f",
     "name": "Marketing site",
     "space": "Development Team",
-    "color": null
+    "color": null,
+    "deleted": false
   },
   {
     "id": "baa0a878-0591-45c7-b879-cbc5240b1469",
     "name": "User Feedback",
     "space": "Product Team",
-    "color": null
+    "color": null,
+    "deleted": false
   },
   {
     "id": "f0b5e695-2684-446b-9d8c-fe65aeae9482",
     "name": "Wishlist",
     "space": "Product Team",
-    "color": null
+    "color": null,
+    "deleted": false
   },
   {
     "id": "e190cbfd-a4d1-4fab-bba9-d619dda5d09e",
     "name": "New Game",
     "space": "Product Team",
-    "color": null
+    "color": null,
+    "deleted": false
   }
 ]

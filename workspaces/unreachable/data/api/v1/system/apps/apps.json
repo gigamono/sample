@@ -1,0 +1,9 @@
+[
+  { "name": "frontend@v0.1", "installed": true },
+  { "name": "backend@v0.1", "installed": true },
+  { "name": "deck@v0.1", "installed": true },
+  { "name": "database@v0.1", "installed": true },
+  { "name": "security@v0.1", "installed": false },
+  { "name": "chatbot@v0.1", "installed": false },
+  { "name": "adi@v0.1", "installed": false }
+]
