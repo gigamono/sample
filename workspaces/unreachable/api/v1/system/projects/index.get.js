@@ -1,4 +1,5 @@
 import { fetchProjectsFromFile } from "../../../../lib/api/v1/system/projects/utils.js";
+import { setCorsHeaders } from "../../../../lib/api/cors.js";
 
 const {
   Response,
@@ -11,13 +12,14 @@ async function main() {
   let result = await fetchProjectsFromFile();
 
   if (space) {
-    space = space.replace('%20', ' ');
+    space = space.replace("%20", " ");
     result = result.filter((item) => item.space == space);
   }
 
-  const response = new Response(JSON.stringify({ data: result }), {
-    headers: { "Access-Control-Allow-Origin": "http://localhost:3000" },
-  });
+  const response = new Response(JSON.stringify({ data: result }));
+
+  // Set CORS headers.
+  setCorsHeaders(response);
 
   await http.respondWith(response);
 }

@@ -7,6 +7,8 @@ permissions:
   fs:
     open: ["/data/api/v1/system/profile/**"]
     read: ["/data/api/v1/system/profile/**"]
+    execute:
+      - "/lib/api/cors.js"
 
   http_event:
     read_request: true

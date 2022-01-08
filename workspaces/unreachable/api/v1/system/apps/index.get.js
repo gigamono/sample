@@ -1,4 +1,5 @@
 import { fetchAppsFromFile } from "../../../../lib/api/v1/system/apps/utils.js";
+import { setCorsHeaders } from "../../../../lib/api/cors.js";
 
 const {
   Response,
@@ -6,17 +7,18 @@ const {
 } = Tera;
 
 async function main() {
-  let installed = http.request.uri.query.get("installed");
+  const enabled = http.request.uri.query.get("enabled");
 
   let result = await fetchAppsFromFile();
 
-  if (installed) {
-    result = result.filter((item) => item.installed);
+  if (enabled) {
+    result = result.filter((item) => item.enabled);
   }
 
-  const response = new Response(JSON.stringify({ data: result }), {
-    headers: { "Access-Control-Allow-Origin": "http://localhost:3000" },
-  });
+  const response = new Response(JSON.stringify({ data: result }));
+
+  // Set CORS headers.
+  setCorsHeaders(response);
 
   await http.respondWith(response);
 }

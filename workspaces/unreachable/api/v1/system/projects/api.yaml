@@ -12,5 +12,7 @@ permissions:
     open: ["/data/api/v1/system/projects/**"]
     read: ["/data/api/v1/system/projects/**"]
     write: ["/data/api/v1/system/projects/**"]
-    execute: ["/lib/api/v1/system/projects/utils.js"]
+    execute:
+      - "/lib/api/v1/system/projects/utils.js"
+      - "/lib/api/cors.js"
 

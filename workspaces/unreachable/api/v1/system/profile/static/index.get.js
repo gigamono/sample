@@ -1,3 +1,5 @@
+import { setCorsHeaders } from "../../../../../lib/api/cors.js";
+
 const {
   File,
   log,
@@ -17,9 +19,10 @@ async function main() {
   const file = await File.open(filename, { read: true });
 
   // Set response and send content of file as response
-  let response = new Response(file, {
-    headers: { "Access-Control-Allow-Origin": "http://localhost:3000" },
-  });
+  let response = new Response(file);
+
+  // Set CORS headers.
+  setCorsHeaders(response);
 
   await http.respondWith(response);
 }

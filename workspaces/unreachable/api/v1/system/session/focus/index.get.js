@@ -1,5 +1,5 @@
-import { fetchProfileFromFile } from "../../../../lib/api/v1/system/profile/utils.js";
-import { setCorsHeaders } from "../../../../lib/api/cors.js";
+import { fetchSessionFromFile } from "../../../../../lib/api/v1/system/session/utils.js";
+import { setCorsHeaders } from "../../../../../lib/api/cors.js";
 
 const {
   Response,
@@ -7,7 +7,7 @@ const {
 } = Tera;
 
 async function main() {
-  let result = await fetchProfileFromFile();
+  let result = await fetchSessionFromFile("focus");
 
   const response = new Response(JSON.stringify({ data: result }));
 

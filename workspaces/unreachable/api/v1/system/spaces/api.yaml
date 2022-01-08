@@ -12,4 +12,6 @@ permissions:
     open: ["/data/api/v1/system/spaces/**"]
     read: ["/data/api/v1/system/spaces/**"]
     write: ["/data/api/v1/system/spaces/**"]
-    execute: ["/lib/api/v1/system/spaces/utils.js"]
+    execute:
+      - "/lib/api/v1/system/spaces/utils.js"
+      - "/lib/api/cors.js"

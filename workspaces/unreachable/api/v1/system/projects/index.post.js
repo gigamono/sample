@@ -1,4 +1,5 @@
 import { saveProjectsToFile } from "../../../../lib/api/v1/system/projects/utils.js";
+import { setCorsHeaders } from "../../../../lib/api/cors.js";
 
 const {
   Response,
@@ -16,7 +17,8 @@ async function main() {
 
   let response = new Response('{ "message": "Resource added" }');
 
-  response.headers.set("Access-Control-Allow-Origin", "http://localhost:3000");
+  // Set CORS headers.
+  setCorsHeaders(response);
 
   await http.respondWith(response);
 }
