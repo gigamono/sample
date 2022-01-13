@@ -1,8 +1,20 @@
 [
   {
     "id": "20c3e85e-c305-469b-8b62-30456244e297",
-    "app": "frontend@v0.1",
     "tabId": "cb1311b8-5644-4a14-99f4-a95cf7d8c1b2",
-    "focus": true
+    "focus": false,
+    "order": 0
+  },
+  {
+    "id": "c685da6d-358f-497c-8575-538c1768fa4a",
+    "tabId": "a0f0c6fd-958c-451b-aef6-1145fb9f99c7",
+    "focus": true,
+    "order": 1
+  },
+  {
+    "id": "6d0ebe09-ccf8-4939-8fad-c6c6580799bd",
+    "tabId": "ad19eba9-8208-4b09-8334-dd7393438239",
+    "focus": false,
+    "order": 0
   }
 ]

@@ -7,7 +7,7 @@ const {
 } = Tera;
 
 async function main() {
-  let result = await fetchSessionFromFile("focus");
+  let result = await fetchSessionFromFile("accessible_apps");
 
   const response = new Response(JSON.stringify({ data: result }));
 

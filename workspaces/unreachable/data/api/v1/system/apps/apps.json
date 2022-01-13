@@ -1,9 +1,9 @@
 [
-  { "name": "frontend@v0.1", "enabled": true, "isSystemApp": false },
-  { "name": "backend@v0.1", "enabled": true, "isSystemApp": false },
-  { "name": "deck@v0.1", "enabled": true, "isSystemApp": false },
-  { "name": "database@v0.1", "enabled": true, "isSystemApp": false },
-  { "name": "security@v0.1", "enabled": false, "isSystemApp": false },
-  { "name": "marketplace@v0.1", "enabled": true, "isSystemApp": true },
-  { "name": "settings@v0.1", "enabled": true, "isSystemApp": true }
+  { "id": "6b30d075-fced-490a-bdcb-f886da59f0fb", "name": "frontend@v0.1", "enabled": true, "isSystemApp": false },
+  { "id": "38dbdd9e-9512-47f1-b2f1-97fc55803518", "name": "backend@v0.1", "enabled": true, "isSystemApp": false },
+  { "id": "9c553493-d5d4-4dfe-8d1f-ae0965c91289", "name": "deck@v0.1", "enabled": true, "isSystemApp": false },
+  { "id": "4a96f8ba-7898-43b9-81fa-c7a35c289676", "name": "database@v0.1", "enabled": true, "isSystemApp": false },
+  { "id": "eaf80b48-f7fc-46d9-9594-9c7f8cd1da4f", "name": "security@v0.1", "enabled": false, "isSystemApp": false },
+  { "id": "ee018bba-a1e8-4c26-a3c2-d22a4ff80356", "name": "marketplace@v0.1", "enabled": true, "isSystemApp": true },
+  { "id": "de0ccef0-a793-4a06-869e-71f6775a253a", "name": "settings@v0.1", "enabled": true, "isSystemApp": true }
 ]

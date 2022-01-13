@@ -1,5 +1,5 @@
-import { fetchAppTabsFromFile } from "../../../../../../lib/api/v1/system/apps/utils.js";
-import { setCorsHeaders } from "../../../../../../lib/api/cors.js";
+import { fetchTabsFromFile } from "../../../../lib/api/v1/system/tabs/utils.js";
+import { setCorsHeaders } from "../../../../lib/api/cors.js";
 
 const {
   Response,
@@ -7,18 +7,21 @@ const {
 } = Tera;
 
 async function main() {
-  const projectId = http.request.uri.query.get("projectId");
-  let result = await fetchAppTabsFromFile();
+  const tabId = http.request.uri.path.get("tabs");
+  let result = await fetchTabsFromFile();
 
   let response = new Response(JSON.stringify({ data: result }));
 
-  if (projectId) {
-    result = result.find((item) => item.id === projectId);
+  if (tabId) {
+    result = result.find((item) => item.id === tabId);
     if (result) {
       response = new Response(JSON.stringify({ data: result }));
     } else {
       response = new Response(
-        '{ "error": [ { "message": "resource not found" }] }'
+        '{ "error": [ { "message": "resource not found" }] }',
+        {
+          status: 400,
+        }
       );
     }
   }

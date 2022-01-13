@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cb1311b8-5644-4a14-99f4-a95cf7d8c1b2",
+    "name": "The First Tab",
+    "appId": "6b30d075-fced-490a-bdcb-f886da59f0fb",
+    "projectId": "dfb8ec34-928d-42e4-87aa-d50e055cf09b"
+  },
+  {
+    "id": "a0f0c6fd-958c-451b-aef6-1145fb9f99c7",
+    "name": "The Second Tab",
+    "appId": "6b30d075-fced-490a-bdcb-f886da59f0fb",
+    "projectId": "dfb8ec34-928d-42e4-87aa-d50e055cf09b"
+  },
+  {
+    "id": "ad19eba9-8208-4b09-8334-dd7393438239",
+    "name": "The First Tab",
+    "appId": "38dbdd9e-9512-47f1-b2f1-97fc55803518",
+    "projectId": "baa0a878-0591-45c7-b879-cbc5240b1469"
+  },
+  {
+    "id": "df5afb6f-820a-4266-ba38-63b19cdc0dca",
+    "name": "The Next Tab",
+    "appId": "38dbdd9e-9512-47f1-b2f1-97fc55803518",
+    "projectId": "baa0a878-0591-45c7-b879-cbc5240b1469"
+  }
+]

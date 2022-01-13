@@ -1,8 +1,8 @@
-const { File, decode, encode, log } = Tera;
+const { File, decode, log } = Tera;
 
-async function fetchAppsFromFile(type) {
-  const filename = `/data/api/v1/system/apps/apps.json`;
+const filename = `/data/api/v1/system/tabs/tabs.json`;
 
+async function fetchTabsFromFile() {
   // Read file content.
   const file = await File.open(filename, { read: true });
   const content = await file.readAll();
@@ -14,4 +14,4 @@ async function fetchAppsFromFile(type) {
   return apps.filter((app) => !app.deleted);
 }
 
-export { fetchAppsFromFile };
+export { fetchTabsFromFile };

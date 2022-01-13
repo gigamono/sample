@@ -9,9 +9,9 @@ permissions:
     send_response: true
 
   fs:
-    open: ["/data/api/v1/system/apps/**"]
-    read: ["/data/api/v1/system/apps/**"]
-    write: ["/data/api/v1/system/apps/**"]
+    open: ["/data/api/v1/system/tabs/**"]
+    read: ["/data/api/v1/system/tabs/**"]
+    write: ["/data/api/v1/system/tabs/**"]
     execute:
-      - "/lib/api/v1/system/apps/utils.js"
+      - "/lib/api/v1/system/tabs/utils.js"
       - "/lib/api/cors.js"
