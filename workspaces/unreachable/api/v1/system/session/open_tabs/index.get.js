@@ -8,12 +8,12 @@ const {
 } = Tera;
 
 async function main() {
-  let app = http.request.uri.query.get("app");
+  let focus = http.request.uri.query.get("focus");
 
   let result = await fetchSessionFromFile("open_tabs");
 
-  if (app) {
-    result = result.filter((tab) => tab.app === app);
+  if (focus) {
+    result = result.filter((tab) => tab.focus);
   }
 
   const response = new Response(JSON.stringify({ data: result }));

@@ -7,7 +7,13 @@ const {
 } = Tera;
 
 async function main() {
+  let focus = http.request.uri.query.get("focus");
+
   let result = await fetchSessionFromFile("accessible_apps");
+
+  if (focus) {
+    result = result.filter((tab) => tab.focus);
+  }
 
   const response = new Response(JSON.stringify({ data: result }));
 

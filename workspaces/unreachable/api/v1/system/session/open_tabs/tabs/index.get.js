@@ -9,16 +9,29 @@ const {
 } = Tera;
 
 async function main() {
-  let app = http.request.uri.query.get("app");
+  let appId = http.request.uri.query.get("appId");
+  let projectId = http.request.uri.query.get("projectId");
+  let focus = http.request.uri.query.get("focus");
 
   let openTabs = await fetchSessionFromFile("open_tabs");
   let tabs = await fetchTabsFromFile();
 
-  let tabIds = app
-    ? openTabs.filter((tab) => tab.appName === app).map((tab) => tab.tabId)
-    : openTabs.map((tab) => tab.tabId);
+  // Filtering.
+  openTabs = focus ? openTabs.filter((tab) => tab.focus) : openTabs;
+  tabs = appId ? tabs.filter((tab) => tab.appId === appId) : tabs;
+  tabs = projectId
+    ? tabs.filter((tab) => tab.projectId === projectId)
+    : tabs;
 
-  const result = tabs.filter((tab) => tabIds.includes(tab.id));
+  // Get tabs corresponding to openTabs.
+  let result = [];
+  for (const openTab of openTabs) {
+    for (const tab of tabs) {
+      if (tab.id === openTab.tabId) {
+        result.push(tab);
+      }
+    }
+  }
 
   const response = new Response(JSON.stringify({ data: result }));
 
