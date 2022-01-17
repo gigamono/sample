@@ -22,10 +22,14 @@ async function main() {
   // Get apps corresponding to accessible.
   let result = [];
   for (const accessibleApp of accessibleApps) {
-    for (const app of apps) {
-      if (app.id === accessibleApp.appId) {
-        result.push(app);
-      }
+    const app = apps.find((app) => app.id === accessibleApp.appId);
+    if (app) {
+      result.push({
+        ...app,
+        focus: accessibleApp.focus,
+        order: accessibleApp.order,
+        accessibleAppId: accessibleApp.id,
+      });
     }
   }
 

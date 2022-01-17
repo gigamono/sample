@@ -1,0 +1,17 @@
+meta:
+  kind: api
+  version: 0.0.1
+  runtime_version: 0.0.1
+
+permissions:
+  http_event:
+    read_request: true
+    send_response: true
+
+  fs:
+    open: ["/data/api/v1/system/session/**"]
+    read: ["/data/api/v1/system/session/**"]
+    write: ["/data/api/v1/system/session/**"]
+    execute:
+      - "/lib/api/v1/system/session/utils.js"
+      - "/lib/api/cors.js"

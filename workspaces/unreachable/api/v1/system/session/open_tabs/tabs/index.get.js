@@ -23,13 +23,17 @@ async function main() {
     ? tabs.filter((tab) => tab.projectId === projectId)
     : tabs;
 
-  // Get tabs corresponding to openTabs.
+  // Get tabs corresponding to openTabs and merge properties.
   let result = [];
   for (const openTab of openTabs) {
-    for (const tab of tabs) {
-      if (tab.id === openTab.tabId) {
-        result.push(tab);
-      }
+    const tab = tabs.find((tab) => tab.id === openTab.tabId);
+    if (tab) {
+      result.push({
+        ...tab,
+        focus: openTab.focus,
+        order: openTab.order,
+        openTabId: openTab.id,
+      });
     }
   }
 
