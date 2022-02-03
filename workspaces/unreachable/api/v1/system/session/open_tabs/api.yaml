@@ -5,8 +5,8 @@ meta:
 
 permissions:
   http_event:
-    read_request: true
-    send_response: true
+    request_read: true
+    response_send: true
 
   fs:
     open: ["/data/api/v1/system/session/**"]

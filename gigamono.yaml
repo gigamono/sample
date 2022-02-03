@@ -3,9 +3,10 @@ meta:
   version: "1"
 
 engines:
-  backend:
+  runtime:
     root_path: ../sample
-    runtime:
+    db_url: mysql://appcypher@localhost/db
+    js_runtime:
       enable_snapshot: false
 
 web_ui:
