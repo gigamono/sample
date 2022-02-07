@@ -2,12 +2,18 @@ meta:
   kind: gigamono
   version: "1"
 
-engines:
-  runtime:
-    root_path: ../sample
-    db_url: mysql://appcypher@localhost/db
-    js_runtime:
-      enable_snapshot: false
+js_runtime:
+  enable_snapshot: false
 
-web_ui:
-  dir: ../web_ui/build
+volume:
+  root: ../sample
+  multi_workspace: true
+
+db:
+  user: db
+  host: localhost
+  port: 3306
+  multi_workspace: true
+
+ui:
+  root: ../web_ui/build
